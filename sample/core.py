@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from . import helpers
 
-def get_hmm():
+
+def get_hmm() -> str:
     """Get a thought."""
-    return 'hmmm...'
+    return "hmmm..."
 
 
-def hmm():
+def hmm() -> None:
     """Contemplation..."""
     if helpers.get_answer():
         print(get_hmm())

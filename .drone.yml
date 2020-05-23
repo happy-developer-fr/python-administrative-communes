@@ -8,3 +8,11 @@ steps:
     commands:
       - pip install -r requirements.txt
       - pytest
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: happydevelopperfr/python-administrative-communes
+      username:
+        from_secret: DOCKER_HUB_LOGIN
+      password:
+        from_secret: DOCKER_HUB_TOKEN

@@ -10,13 +10,13 @@ freeze:
 	pip freeze | grep -v "pkg-resources" > requirements.txt
 
 docker-build:
-	sudo docker build --tag "juliencottet/python-administrative-communes:2020.05.0.0" .
+	sudo docker build --tag "happydevelopperfr/python-administrative-communes:2020.05.0.0" .
 
 docker-rm:
-	sudo docker rm python-administrative-communes
+	sudo docker rm pac
 
 docker-run: docker-rm
-		sudo docker run --name python-administrative-communes -it juliencottet/python-administrative-communes:2020.05.0.0
+		sudo docker run --name pac happydevelopperfr/python-administrative-communes:2020.05.0.0
 
 docker-it:
-	sudo docker exec -it 'python-administrative-communes' /bin/sh
+	sudo docker exec -it pac /bin/sh

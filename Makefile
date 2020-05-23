@@ -1,3 +1,5 @@
+default: init test docker-build
+
 init:
 	pip install -r requirements.txt
 
